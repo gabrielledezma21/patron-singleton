@@ -12,6 +12,6 @@ public class ConectorADBTest {
         var instance1 = ConectorADB.getInstance();
         var instance2 = ConectorADB.getInstance();
 
-        assertEquals(instance1.hashCode(), instance2.hashCode());
+        assertEquals(instance1, instance2);
     }
 }
