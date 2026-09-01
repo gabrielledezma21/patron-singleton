@@ -28,19 +28,21 @@ La instancia se crea al inicializar la clase y `getInstance()` simplemente devue
 ```mermaid
 classDiagram
     class ConectorDB {
-        <<Singleton diferido>>
-        -static ConectorDB instance
+        <<Singleton>>
+        -ConectorDB instance
         -ConectorDB()
-        +static getInstance() ConectorDB
+        +getInstance() ConectorDB
     }
 
     class ConectorADB {
-        <<Singleton anticipado>>
-        -static ConectorADB instance
+        <<Singleton>>
+        -ConectorADB instance
         -ConectorADB()
-        +static getInstance() ConectorADB
+        +getInstance() ConectorADB
     }
 ```
+
+> `ConectorDB` crea la instancia de forma diferida, mientras que `ConectorADB` la crea de forma anticipada. En ambas clases, `instance` y `getInstance()` son miembros estáticos.
 
 ## Funcionamiento
 
